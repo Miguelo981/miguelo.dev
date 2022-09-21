@@ -3,7 +3,6 @@ import NavList from "../components/Lists/NavList";
 import { socialMedias } from "../mocks/social-media.mock";
 import { t } from "i18next";
 import { DEFAULT_LANG } from "../config/i18n.config";
-//import { Image } from '@astrojs/image/components';
 
 var { lang } = Astro.params;
 
@@ -23,14 +22,6 @@ if (typeof lang !== "string") {
       {
         socialMedias.map((social, index) => (
           <a href={social.Href} target="_blank" class="zoom-in" >
-            {/*<Image 
-              src={`/assets/img/icons/${social.icon}.svg`}
-              class={'w-6 h-auto'}
-              alt={social.icon}
-              width={24}
-              height={24}
-              loading="lazy"
-            />*/}
             <img 
               src={`/assets/img/icons/${social.icon}.svg`}
               class='w-6 h-auto'
