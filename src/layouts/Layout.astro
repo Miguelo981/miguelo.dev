@@ -1,0 +1,55 @@
+---
+import Navbar from '../layouts/Navbar.astro';
+import Footer from '../layouts/Footer.astro'
+import i18next, { t } from "i18next";
+import { DEFAULT_LANG } from '../config/i18n.config';
+
+var { lang } = Astro.params;
+
+if (typeof lang !== "string") {
+    lang = DEFAULT_LANG;
+}
+
+if (i18next.language !== lang) i18next.changeLanguage(lang)
+
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+	<head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{t('meta.homepage.title')}</title>
+        <link rel="canonical" href="https://miguelo.dev" />
+        <meta name="description" content={t('home.description')} />
+        <meta name="author" content="Miguel Angel" />
+        <meta name="keywords" content={t('meta.keywords')} />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+		<meta name="generator" content={Astro.generator} />
+		<script
+			async
+			src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_CODE}`}
+		/>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				window.dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", import.meta.env.PUBLIC_GA_CODE);
+		</script>
+    </head>
+	<header>
+		<Navbar />
+	</header>
+	<body>
+		<slot />
+	</body>
+	<Footer />
+</html>

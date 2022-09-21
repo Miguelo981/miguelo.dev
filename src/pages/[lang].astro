@@ -1,0 +1,20 @@
+---
+import { getProjects } from "../services/project/project.service";
+import { getServices } from "../services/services/services.service";
+import type { ProjectThumbnail } from "../models/project-thumbnail.model";
+import type { Service } from "../models/service.model";
+import Index from './index.astro';
+
+const projects: ProjectThumbnail[] = await getProjects();
+const services: Service[] = await getServices();
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}},
+  ];
+}
+
+---
+
+<Index projects={projects} services={services} />

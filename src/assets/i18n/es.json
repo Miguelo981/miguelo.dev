@@ -1,0 +1,196 @@
+{
+    "meta": {
+        "homepage": {
+            "title": "▷ Experto En Desarrollo Web En España | Miguelo DEV",
+            "description": "",
+            "keywords": [
+                "miguelo desarrollador"
+            ]
+        },
+        "projectList": {
+            "title": "▷ Mis proyectos Web | Miguelo DEV",
+            "description": "",
+            "keywords": [
+                "miguelo desarrollador"
+            ]
+        }
+    },
+    "utils": {
+        "knowMore": "Saber más",
+        "cancel": "Cancelar",
+        "reset": "Resturar",
+        "comingsoon": "Próximamente",
+        "goBack": "Volver"
+    },
+    "loading": {
+        "text": "Cargando..."
+    },
+    "tooltips": {
+        "languageSelector": "Desliza para cambiar el idioma."
+    },
+    "navbar": {
+        "routes": {
+            "home": "Inicio",
+            "aboutMe": "Sobre mi",
+            "services": "Servicios",
+            "portfolio": "Portfolio",
+            "contact": "Contacto",
+            "testimonials": "Testimonios",
+            "blog": "Blog"
+        },
+        "test": {
+            "test": "Aun más loco"
+        }
+    },
+    "aboutMe": {
+        "title": "Sobre mi",
+        "subTitle": "¿Quién Soy?",
+        "socialTitle": "Mis redes sociales",
+        "summary1": "Mi nombre es Miguel Ángel y mi objetivo es ayudar a mis clientes a establecer una presencia en línea para que puedan ",
+        "summary2": "llegar de manera efectiva a su audiencia y convertir nuevos clientes.",
+        "description1": "Como programador, me especializo en la implementación de infraestructuras y desarrollo web, como landing pages o toda clase de automatización de procesos.\n\nHe programado de todo, desde aplicaciones web completas hasta exchanges descentralizados en poco tiempo. Presto gran atención a los detalles  ",
+        "description2": "para garantizar que los productos estén optimizados para el rendimiento y la usabilidad en una multitud de dispositivos",
+        "description3": " utilizados por los consumidores de hoy en día.",
+        "description4": "¡Charlemos sobre sus necesidades y veamos si podemos ayudarlo a digitalizar tu negocio!",
+        "projects": "Algunos de mis Trabajos"
+    },
+    "services": {
+        "title": "Servicios",
+        "services": {
+            "webDev": {
+                "title": "Desarrollo Web",
+                "description": "Desarrollo de plataformas y soluciones específicas para tus aplicaciones web modernas y de carga rápida."
+            },
+            "apiDev": {
+                "title": "Desarrollo de APIs",
+                "description": "Creación de backends eficientes y seguros usando las últimas técnologias del mercado."
+            },
+            "responsiveDev": {
+                "title": "Web Responsive",
+                "description": "Me aseguro de que todas aplicaciones que desarrollo se ven perfectas en todos los dispositvos."
+            },
+            "web3Dev": {
+                "title": "Desarrollo Web3",
+                "description": "Creación de dApps y conexión con contratos inteligentes. Maquetación de tus proyectos Blockchain."
+            },
+            "deployDev": {
+                "title": "Despliegue de Apps",
+                "description": "No tendrás que preocuparte por la gestión o mantenimiento de tu web o servidor. Yo me encargaré de ello."
+            },
+            "customDev": {
+                "title": "Software a Medida",
+                "description": "Realización de proyectos tecnológicos personalizados y adaptados a tus necesidades."
+            }
+        }
+    },
+    "skills": {
+        "title": "Mis habilidades",
+        "languages": "Lenguajes",
+        "frameworks": "Frameworks",
+        "dbs": "Bases de datos",
+        "programs": "Programas"
+    },
+    "projects": {
+        "title": "Portfolio",
+        "visit": "Visitar web",
+        "visitGithub": "Visitar Github",
+        "technologies": "Tecnologías",
+        "clients": {
+            "cubpaper": {
+                "description": "Fabricantes de sobres y especialistas Europeos en envío y embalaje postal."
+            },
+            "avemFinance": {
+                "description": "Avem es la conexión del inversor con el dominio Polkadot a través de un intercambio descentralizado, una plataforma de lanzamiento y productos DeFi construidos sobre la red Shiden."
+            },
+            "themarSolutions": {
+                "description": "Themar es una empresa que desarrolla soluciones personalizadas de proyectos Blockchain y DLT."
+            },
+            "cryptomaster": {
+                "description": "Escuela especializada en cryptoeconomía y finanzas descentralizadas. Te enseñarán cómo multiplicar tus ahorros manteniendo el riesgo siempre bajo control."
+            },
+            "mancarot": {
+                "description": "Manuel Carot, también conocido como Man o Mancarot, es un pintor, dibujante y tatuador Catalan."
+            },
+            "unicLegacy": {
+                "description": "El primer portal que transforma los momentos más relevantes de tus ídolos favoritos en NFTs. Comenzando con el mundialmente conocido Andrés Iniesta."
+            },
+            "web3Dashboard": {
+                "description": "dApp de código abierto especializada en previsualizar el balance de tu billetera Metamask. Agregar / cambiar / eliminar Tokens y Networks de manera rápida y sencilla."
+            }
+        }
+    },
+    "cta": {
+        "title": "Tú traes la idea, yo la hago realidad.",
+        "description": "Creemos tu sitio web perfecto hoy mismo."
+    },
+    "errors": {
+        "text": "ERROR",
+        "notFount": {
+            "errorNumber": "404",
+            "errorType": "Página no encontrada."
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "chat": "Chatea conmigo",
+        "me": "Contáctame",
+        "description": "Estoy disponible de lunes a sábado. Para los mensajes recibidos fuera del horario laboral, espere una respuesta cuando se reanude el horario laboral normal.",
+        "label": {
+            "fullname": "Nombre completo",
+            "email": "Email",
+            "message": "Mensaje"
+        },
+        "placeholder": {
+            "fullname": "Miguel Ángel Rodríguez",
+            "email": "miguel@gmail.com",
+            "message": "Lorem Ipsum is simply dummy text..."
+        },
+        "hint": {
+            "fullname": "Máximo 60 caracteres.",
+            "message": "Máximo 1000 caracteres."
+        },
+        "errors": {
+            "required": {
+                "fullname": "Nombre completo es obligatorio.",
+                "email": "Email es obligatorio.",
+                "message": "Mensaje es obligatorio."
+            },
+            "length": {
+                "fullname": "Tiene más de 60 caracteres.",
+                "message": "Tiene más de 1000 caracteres."
+            },
+            "valid": {
+                "email": "El email debe ser válido."
+            }
+        },
+        "buttons": {
+            "submit": "Enviar mensaje",
+            "close": "Cerrar X"
+        }
+    },
+    "home": {
+        "title": "Miguelo DEV",
+        "subTitle": "DIGITALIZA TU NEGOCIO DESDE CERO",
+        "description": "Me especializo en crear y maquetar sitios web que se ven geniales, cargan rápido y son fáciles de administrar. Eso atrae a los usuarios con diseños limpios, modernos y adaptables a cualquier dispositivo."
+    },
+    "footer": {
+        "copyright": "©",
+        "brandName": "Miguelodev",
+        "rights": "Todos los derechos reservados"
+    },
+    "cookie": {
+        "header": "Cookies used on the website!",
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "allow": "Allow cookies",
+        "deny": "Decline",
+        "link": "Learn more",
+        "policy": "Cookie Policy"
+    },
+    "response": {
+        "contactForm": {
+            "created": "Formulario envíado con éxito."
+        },
+        "sending": "Enviando..."
+    }
+}

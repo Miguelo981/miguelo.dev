@@ -1,0 +1,278 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { t } from "i18next";
+import HomeBG from '../components/HomeBG';
+import ContactButton from "../components/Btns/ContactButton";
+import ProjectList from '../components/Lists/ProjectList';
+import ServiceList from '../components/Lists/ServiceList.astro';
+import TechList from '../components/Lists/TechList';
+import ContactForm from "../components/ContactForm";
+import DownArrow from '../components/Btns/DownArrow';
+import { getProjects } from "../services/project/project.service";
+import { getServices } from "../services/services/services.service";
+import type { ProjectThumbnail } from "../models/project-thumbnail.model";
+import type { Service } from "../models/service.model";
+
+export interface Props {
+    projects?: ProjectThumbnail[],
+    services?: Service[]
+}
+
+const projects: ProjectThumbnail[] = await getProjects();
+const services: Service[] = await getServices();
+
+---
+
+<Layout>
+	<main>
+		<section class='h-screen'>
+			{/* <Parallax speed={-25}>
+			<img src={logo} class="App-logo" alt="logo" />
+		  </Parallax>
+		  <Parallax speed={-10}>
+			<p class="text-7xl font-bold">Hello Vite + React!</p>
+		  </Parallax> */}
+			{/* <Parallax speed={-25} class='absolute z-10'>
+			<img src={logo} class="App-logo" alt="logo" />
+		  </Parallax> */}
+  
+			<div class="bg-slate-900 flex home-container mx-auto px-6 md:px-0 min-h-[85vh]">
+                <HomeBG client:visible />
+			  <div class='text-center relative z-20 m-auto text-white'>
+				<h1 class='text-7xl font-extrabold my-10'>{t('home.title')}</h1>
+				<h3 class='text-5xl text-animated font-extrabold my-4'>{t('home.subTitle')}</h3>
+				<p class='max-w-3xl mx-auto n:text-sm lg:text-xl'>{t('home.description')}</p>
+				<div class='mt-16'>
+				    <ContactButton client:visible />
+				</div>
+			  </div>
+			</div>
+			<DownArrow client:idle />
+		  </section>
+		  <section id="about-me" class='app-container min-h-screen py-24'>
+			<div class='flex flex-col lg:flex-row justify-between pb-16 space-y-6 lg:space-y-0'>
+			  <div class="w-full lg:w-1/2 text-start text-gray-800">
+				<h2 class='text-6xl font-bold pb-10 text-black'>{t('aboutMe.title')}</h2>
+				<h3 class="text-xl lg:text-2xl font-bold uppercase mb-2">{t('aboutMe.subTitle')}</h3>
+				<p class="text-xs lg:text-base pb-8">{t('aboutMe.summary1')}
+				  <b class="">{t('aboutMe.summary2')}</b>
+				</p>
+				<h3 class="text-xl lg:text-3xl font-black pb-2">{t('home.subTitle')}</h3>
+				<p class="text-xs lg:text-base whitespace-pre-line">{t('aboutMe.description1')}
+				  <strong>{t('aboutMe.description2')}</strong>{t('aboutMe.description3')}
+				</p>
+			  </div>
+			  <img loading="lazy" src="/assets/img/profiles/blockchain.webp" alt="" />
+			</div>
+			<h2 class="text-xl lg:text-4xl font-bold uppercase">{t('skills.title')}</h2>
+			<TechList client:visible />
+		  </section>
+		  <section id="services" class='app-container flex flex-col items-center space-y-12 min-h-screen lg:min-h-[70vh] h-full justify-center'>
+			<h2 class='text-6xl text-black font-bold'>{t('services.title')}</h2>
+			<div class='flex flex-wrap justify-center gap-6 pb-8'>
+			  <ServiceList serviceList={services} />
+			</div>
+		  </section>
+		  <section class='w-full bg-gradient-to-tl from-blue-500 to-purple-800 min-h-[30vh] h-full flex'>
+			<div class='container mx-auto px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center space-x-4 h-full text-white my-auto py-10'>
+			  <div class='w-full md:w-1/2 text-center space-y-2'>
+				<h2 class='text-2xl md:text-4xl font-bold leading-none'>{t('cta.title')}</h2>
+				<p class='text-lg md:text-2xl font-semibold pb-5 md:pb-0'>{t('cta.description')}</p>
+			  </div>
+			  <ContactButton client:visible className='m-grad-btn-1 rounded-3xl border-2 border-gray-300 text-2xl lg:text-4xl px-12 py-4' />
+			  {/* <button class='py-3 px-10 rounded-2xl border-[3px] bg-gradient-to-r from-transparent to-transparent hover:to-blue-500 from:to-purple-800 border-white hover:border-blue-600 text-white font-bold p-4'>{t('contact.me')}</button> */}
+			</div>
+		  </section>
+		  <section id="portfolio" class='app-container flex flex-col items-center space-y-12 pt-14'>
+			<h2 class='text-6xl text-black font-bold'>{t('projects.title')}</h2>
+			<div class='flex flex-wrap justify-center gap-6'>
+			  <ProjectList projectList={projects}  />
+			</div>
+		  </section>
+		  <section id="contact-me" class='app-container min-h-[75vh] h-full flex items-center justify-center my-10'>
+			<div class='space-y-6 w-full md:max-w-2xl text-center'>
+			  <div class='rounded-3xl border-4 border-blue-500 p-5 md:p-10 bg-white w-full shadow-lg space-y-6'>
+				<h2 class='text-6xl text-black font-bold'>{t('contact.title')}</h2>
+				<p>{t('contact.description')}</p>
+				<ContactForm client:visible />
+			  </div>
+			</div>
+		  </section>
+	</main>
+</Layout>
+
+<style lang="scss" is:global>
+	body {
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+			"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+			"Helvetica Neue", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: white;
+		@apply bg-gray-50 text-black;
+	}
+
+	code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+			monospace;
+	}
+
+	.text-animated {
+		text-align: center;
+
+		background: linear-gradient(
+			90deg,
+			rgb(162, 68, 255) 0%,
+			rgb(52, 182, 255) 50%,
+			rgb(162, 68, 255) 100%
+		);
+		background-size: 200% auto;
+
+		color: #000;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		animation: shine 4s linear infinite;
+	}
+
+	@keyframes shine {
+		to {
+			background-position: 200% center;
+		}
+	}
+
+	.m-grad-btn-1 {
+		background-image: linear-gradient(to right, #2563eb, #6a25eb);
+		color: #fff;
+		transition: 0.5s;
+		background-size: 150% auto;
+		display: block;
+		//border-color: transparent;
+	}
+
+	.m-grad-btn-1:hover,
+	.m-grad-btn-1:focus {
+		color: #fff;
+		background-position: right center;
+		text-decoration: none;
+		//border-color:transparent;
+	}
+
+	.app-container {
+		@apply container mx-auto mt-4 px-4 sm:px-0;
+	}
+
+	.home-container:after {
+		content: " ";
+		right: 0;
+		bottom: -85px;
+		opacity: 1;
+		left: 0;
+		height: 330px;
+		position: absolute;
+		z-index: 0;
+		background-position: center top;
+		background-size: cover;
+		margin-bottom: 75px;
+		//background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNjc5IDE5OC42Jz48cGF0aCBkPSdNODM5LjUgOTYuN0M0ODUuMyA5Ni43IDE3NC41IDU3LjkgMCAwdjE5OC42aDE2NzlWMGMtMTc0LjUgCTU3LjktNDg1LjMgOTYuNy04MzkuNSA5Ni43eicgZmlsbD0nI2ZmZicvPjwvc3ZnPg==);
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjc5IiBoZWlnaHQ9IjE5OC42Ij48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIvPjxnIGNsYXNzPSJjdXJyZW50TGF5ZXIiIHN0eWxlPSIiPjx0aXRsZT5MYXllciAxPC90aXRsZT48cGF0aCBkPSJNODM5LjUsOTYuMTE1MjA0NzAzODA3ODMgQzQ4NS4zLDk2LjExNTIwNDcwMzgwNzgzIDE3NC41LDU3LjMxNTIwNDcwMzgwNzgzIDAsLTAuNTg0Nzk1Mjk2MTkyMTY5MiB2MTk4LjYgaDE2NzkgVi0wLjU4NDc5NTI5NjE5MjE2OTIgYy0xNzQuNSw1Ny45IC00ODUuMyw5Ni43IC04MzkuNSw5Ni43IHoiIGZpbGw9IiNmOWZhZmIiIGlkPSJzdmdfMSIgY2xhc3M9InNlbGVjdGVkIiBmaWxsLW9wYWNpdHk9IjEiLz48L2c+PC9zdmc+);
+	}
+
+	@media (max-width: 400px) {
+		.home-container:after {
+			bottom: -125px;
+		}
+	}
+
+	#tsparticles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		canvas {
+			position: relative !important;
+		}
+	}
+
+	.view-more {
+		background-color: #2563eb;
+		@apply py-2 px-4 rounded-md;
+
+		&:hover {
+			@apply bg-blue-500;
+		}
+
+		&:disabled {
+			@apply bg-blue-400;
+		}
+	}
+
+	.open-source {
+		@apply py-2 px-4 rounded-md bg-slate-900;
+
+		&:hover {
+			@apply bg-slate-800;
+		}
+
+		&:disabled {
+			@apply bg-slate-700;
+		}
+	}
+
+	.swiper {
+		height: 175px;
+	}
+
+	.swiper-pagination {
+		bottom: 25px;
+		//top: 60px !important;
+		position: absolute !important;
+		z-index: 5;
+	}
+
+	.swiper-wrapper {
+		align-items: center; /* add this will all relevant prefixes */
+		//@apply mx-12;
+	}
+
+	.zoom-in {
+		@apply transition ease-in hover:scale-125 duration-200;
+	}
+
+	.zoom-in-short {
+		@apply transition ease-in hover:scale-105 duration-200;
+	}
+
+	.input-label {
+		font-size: 10px;
+		@apply text-blue-500;
+	}
+
+	.label-container {
+		@apply flex absolute left-0 pl-4 pt-1 pointer-events-none;
+	}
+
+	.app-text-input {
+		@apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 bg-gray-100 border border-gray-300;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			@apply text-gray-400;
+		}
+	}
+
+	.app-text-input.is-valid {
+		@apply bg-blue-50;
+	}
+
+	.app-text-input.invalid {
+		@apply bg-red-50;
+	}
+</style>
