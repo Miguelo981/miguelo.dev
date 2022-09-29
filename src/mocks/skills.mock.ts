@@ -51,6 +51,11 @@ export const frameworks: Skill[] = [
         delay: 2000
     },
     {
+        Name: "Astro",
+        Icon: "/assets/img/icons/astro.webp",
+        delay: 2000
+    },
+    {
         Name: "VueJs",
         Icon: "/assets/img/icons/vuejs.webp",
         delay: 2000
@@ -108,7 +113,7 @@ export const programs: Skill[] = [
         Icon: "/assets/img/icons/postman.webp",
         delay: 4250
     },
-    {
+    /* {
         Name: "Wordpress",
         Icon: "/assets/img/icons/wordpress.webp",
         delay: 4500
@@ -127,7 +132,7 @@ export const programs: Skill[] = [
         Name: "Figma",
         Icon: "/assets/img/icons/figma.webp",
         delay: 5000
-    }
+    } */
 ]
 
 export const dbs: Skill[] = [
@@ -172,4 +177,4 @@ export const mockedSkillList: SkillList[] = [
     },
 ]
 
-export const allSkills = [...programmingLanguages, ...frameworks, ...programs, ...dbs];
+export const allSkills = [...frameworks, ...programmingLanguages, ...programs, ...dbs];

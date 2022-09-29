@@ -1,0 +1,18 @@
+---
+import { allSkills } from '../../mocks/skills.mock';
+
+---
+
+<div class='flex flex-wrap gap-4 items-center'>
+    {
+      allSkills.map((skill, index) => (
+        <div class="flex justify-center h-full">
+          <picture class='w-6 lg:w-10 h-auto mx-auto my-auto zoom-in'>
+            <source srcset={`${skill.Icon}`} media="(min-width: 992px)" />
+            <source srcset={`${skill.Icon}.small.webp`} media="(min-width: 0px)" />
+            <img loading="lazy" src={`${skill.Icon}.small.webp`} alt={skill.Name} />
+          </picture>
+        </div>
+      ))
+    }
+  </div>
