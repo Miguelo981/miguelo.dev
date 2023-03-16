@@ -16,9 +16,9 @@ const MENU_OPTIONS = [
         href: ""
     },
     {
-        text: "Sobre mi",
-        id: "about-me",
-        t: "aboutMe",
+        text: "Portfolio",
+        id: "portfolio",
+        t: "portfolio",
         href: ""
     },
     {
@@ -28,12 +28,11 @@ const MENU_OPTIONS = [
         href: ""
     },
     {
-        text: "Portfolio",
-        id: "portfolio",
-        t: "portfolio",
+        text: "Sobre mi",
+        id: "about-me",
+        t: "aboutMe",
         href: ""
-    },
-    {
+    },{
         text: "Contacto",
         id: "contact-me",
         t: "contact",
@@ -65,8 +64,8 @@ export default function NavList({ className, lang }: NavListProps) {
                 MENU_OPTIONS
                     .map((option, index) => (
                         <li key={'nav-' + index}>
-                            <a onClick={(event) => { option.href ? window.open(option.href, "_self") : handleMenuScroll(option.id) }} className="block py-2 pr-4 pl-3 cursor-pointer" aria-current="page">
-                                <span className={className}>{i18n.t(`navbar.routes.${option.t}`) as any}</span>
+                            <a onClick={() => { option.href ? window.open(option.href, "_self") : handleMenuScroll(option.id) }} className="block py-2 pr-4 pl-3 cursor-pointer" aria-current="page">
+                                <span className={className}>{i18n.t(`navbar.routes.${option.t}`)}</span>
                             </a>
                         </li>
                     ))

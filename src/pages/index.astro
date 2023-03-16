@@ -5,7 +5,6 @@ import HomeBG from '../components/HomeBG';
 import ContactButton from "../components/Btns/ContactButton";
 import ProjectList from '../components/Lists/ProjectList';
 import ServiceList from '../components/Lists/ServiceList.astro';
-//import TechList from '../components/Lists/TechList';
 import TechList from '../components/Lists/TechList.astro';
 import ContactForm from "../components/ContactForm";
 import DownArrow from '../components/Btns/DownArrow';
@@ -50,9 +49,21 @@ const services: Service[] = await getServices();
 			</div>
 			<DownArrow client:idle />
 		  </section>
+		  <section id="portfolio" class='app-container flex flex-col items-center space-y-12 pt-14'>
+			<h2>{t('projects.title')}</h2>
+			<div class='flex flex-wrap justify-center gap-6'>
+			  <ProjectList projectList={projects}  />
+			</div>
+		  </section>
+		  <section id="services" class='app-container flex flex-col items-center space-y-12 min-h-screen lg:min-h-screen h-full justify-center'>
+			<h2>{t('services.title')}</h2>
+			<div class='flex flex-wrap justify-center gap-6 pb-8 lg:max-w-4xl'>
+			  <ServiceList serviceList={services} />
+			</div>
+		  </section>
 		  <section id="about-me" class='app-container min-h-screen py-24'>
 			<div class='flex flex-col lg:flex-row justify-between pb-16 space-y-6 lg:space-y-0'>
-			  <div class="w-full lg:w-1/2 text-start text-gray-800">
+			  <div class="w-full lg:w-1/2 text-start text-gray-800 dark:text-gray-50">
 				<h2 class='pb-10'>{t('aboutMe.title')}</h2>
 				<h3 class="text-xl lg:text-2xl font-bold uppercase mb-2">{t('aboutMe.subTitle')}</h3>
 				<p class="text-xs lg:text-base pb-8">{t('aboutMe.summary1')}
@@ -65,15 +76,9 @@ const services: Service[] = await getServices();
 			  </div>
 			  <img loading="lazy" src="/assets/img/profiles/about-me.webp" alt="" class="hidden lg:block" />
 			</div>
-			<h2 class="text-xl lg:text-4xl font-bold uppercase mb-3 lg:mb-6">{t('skills.title')}</h2>
+			<!-- <h2 class="text-xl lg:text-4xl font-bold uppercase mb-3 lg:mb-6">{t('skills.title')}</h2> -->
 			<!-- <TechList client:visible /> -->
-			<TechList />
-		  </section>
-		  <section id="services" class='app-container flex flex-col items-center space-y-12 min-h-screen lg:min-h-[70vh] h-full justify-center'>
-			<h2>{t('services.title')}</h2>
-			<div class='flex flex-wrap justify-center gap-6 pb-8'>
-			  <ServiceList serviceList={services} />
-			</div>
+			<!-- <TechList /> -->
 		  </section>
 		  <section class='w-full bg-gradient-to-tl from-blue-500 to-purple-800 min-h-[30vh] h-full flex'>
 			<div class='container mx-auto px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center space-x-4 h-full text-white my-auto py-10'>
@@ -85,16 +90,10 @@ const services: Service[] = await getServices();
 			  {/* <button class='py-3 px-10 rounded-2xl border-[3px] bg-gradient-to-r from-transparent to-transparent hover:to-blue-500 from:to-purple-800 border-white hover:border-blue-600 text-white font-bold p-4'>{t('contact.me')}</button> */}
 			</div>
 		  </section>
-		  <section id="portfolio" class='app-container flex flex-col items-center space-y-12 pt-14'>
-			<h2>{t('projects.title')}</h2>
-			<div class='flex flex-wrap justify-center gap-6'>
-			  <ProjectList projectList={projects}  />
-			</div>
-		  </section>
 		  <section id="contact-me" class='app-container min-h-[75vh] h-full flex items-center justify-center my-10'>
 			<div class='space-y-6 w-full md:max-w-2xl text-center'>
-			  <div class='rounded-3xl border-4 border-blue-500 p-5 md:p-10 bg-white w-full shadow-lg space-y-6'>
-				<h2 class='text-6xl text-black font-bold'>{t('contact.title')}</h2>
+			  <div class='rounded-3xl border-4 border-blue-500 p-5 md:p-10 bg-white dark:bg-slate-800 w-full shadow-lg space-y-6'>
+				<h2 class='text-6xl text-black dark:text-white font-bold'>{t('contact.title')}</h2>
 				<p>{t('contact.description')}</p>
 				<ContactForm client:visible />
 			  </div>
@@ -111,8 +110,7 @@ const services: Service[] = await getServices();
 			"Helvetica Neue", sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		color: white;
-		@apply bg-gray-50 text-black;
+		@apply bg-gray-50 dark:bg-slate-900 dark:text-white text-black;
 	}
 
 	code {
@@ -121,7 +119,11 @@ const services: Service[] = await getServices();
 	}
 
 	h2 {
-		@apply text-6xl font-extrabold text-black;
+		@apply text-6xl font-extrabold text-black dark:text-white;
+	}
+
+	h3, h4 {
+		@apply text-black dark:text-white;
 	}
 
 	.text-animated {
@@ -184,6 +186,8 @@ const services: Service[] = await getServices();
 		background-size: cover;
 		margin-bottom: 75px;
 		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjc5IiBoZWlnaHQ9IjE5OC42Ij48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIvPjxnIGNsYXNzPSJjdXJyZW50TGF5ZXIiIHN0eWxlPSIiPjx0aXRsZT5MYXllciAxPC90aXRsZT48cGF0aCBkPSJNODM5LjUsOTYuMTE1MjA0NzAzODA3ODMgQzQ4NS4zLDk2LjExNTIwNDcwMzgwNzgzIDE3NC41LDU3LjMxNTIwNDcwMzgwNzgzIDAsLTAuNTg0Nzk1Mjk2MTkyMTY5MiB2MTk4LjYgaDE2NzkgVi0wLjU4NDc5NTI5NjE5MjE2OTIgYy0xNzQuNSw1Ny45IC00ODUuMyw5Ni43IC04MzkuNSw5Ni43IHoiIGZpbGw9IiNmOWZhZmIiIGlkPSJzdmdfMSIgY2xhc3M9InNlbGVjdGVkIiBmaWxsLW9wYWNpdHk9IjEiLz48L2c+PC9zdmc+);
+		//@apply fill-slate-700;
+		//@apply bg-white dark:bg-slate-900;
 	}
 
 	@media (max-width: 400px) {
@@ -263,26 +267,18 @@ const services: Service[] = await getServices();
 	}
 
 	.app-btn {
-		@apply m-grad-btn-1 rounded-full text-xl lg:text-3xl font-semibold px-20 py-4;
+		@apply m-grad-btn-1 rounded-full text-xl lg:text-3xl font-semibold px-20 py-4 transition ease-in-out hover:scale-105;
 	}
 
 	.app-text-input {
-		@apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 bg-gray-100 border border-gray-300;
-
-		&:focus {
-			outline: none;
-		}
+		@apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 dark:text-white bg-gray-100 dark:bg-slate-700 valid:bg-blue-50 valid:dark:bg-slate-700 focus:outline-none border border-gray-300;
 
 		&::placeholder {
 			@apply text-gray-400;
 		}
 	}
 
-	.app-text-input.is-valid {
-		@apply bg-blue-50;
-	}
-
 	.app-text-input.invalid {
-		@apply bg-red-50;
+		@apply bg-red-50 dark:bg-slate-700;
 	}
 </style>

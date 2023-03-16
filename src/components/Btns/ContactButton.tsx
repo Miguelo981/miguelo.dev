@@ -7,7 +7,7 @@ type ContactButtonProps = {
 }
 
 export default function ContactButton({ text, className }: ContactButtonProps) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <button onClick={() => handleMenuScroll('contact-me')} className={ className || "app-btn mx-auto" }>{text || t('contact.me') }</button>
