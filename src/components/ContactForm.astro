@@ -1,0 +1,84 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { API_URL } from "@/constants";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<form
+  class="mt-8 w-full space-y-6 text-start"
+  action={`${API_URL}/contact-form`}
+  method="POST"
+  id="contact-form"
+>
+  <div class="relative">
+    <div class="label-container">
+      <label for="full_name" class="input-label">
+        {`${t("contact.label.fullname")} *`}
+      </label>
+    </div>
+    <input
+      type="text"
+      id="full_name"
+      name="full_name"
+      class="app-text-input"
+      placeholder={t("contact.placeholder.fullname") as string}
+    />
+    <!-- <small class="text-red-400">{formik.errors.full_name}</small> -->
+  </div>
+
+  <div class="relative">
+    <div class="label-container">
+      <label for="email" class="input-label">
+        {`${t("contact.label.email")} *`}
+      </label>
+    </div>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      class="app-text-input"
+      placeholder={t("contact.placeholder.email") as string}
+    />
+    <!-- <small class="text-red-400">{formik.errors.email}</small> -->
+  </div>
+
+  <div class="relative">
+    <div class="label-container">
+      <label for="message" class="input-label">
+        {`${t("contact.label.message")} *`}
+      </label>
+    </div>
+    <textarea
+      id="message"
+      name="message"
+      class="app-text-input"
+      placeholder={t("contact.placeholder.message") as string}></textarea>
+    <!-- <small class="text-red-400">{formik.errors.message}</small> -->
+  </div>
+  <button
+    class="secondary-btn py-2 w-full text-2xl text-white lg:text-2xl"
+    type="submit"
+  >
+    {t("contact.buttons.submit") as string}
+  </button>
+</form>
+<script lang="js">
+    const form = document.getElementById("contact-form");
+
+    function handleSubmit(e) {
+        console.log(e)
+        //if (e.preventDefault) e.preventDefault();
+
+        // You must return false to prevent the default form behavior
+        //return false;
+    }
+
+    if (form.attachEvent) {
+        form.attachEvent("submit", handleSubmit);
+    } else {
+        form.addEventListener("submit", handleSubmit);
+    }
+</script>

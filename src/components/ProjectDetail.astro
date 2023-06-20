@@ -1,0 +1,65 @@
+---
+import type { Project } from "@/models/projects";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { ui } from "@/i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props as Props;
+---
+
+<article
+  class={`flex-col md:flex-row rounded-xl w-full bg-white dark:bg-slate-800 flex zoom-in-short border border-gray-200 dark:border-gray-600 p-4 md:p-6 gap-4 ${
+    index % 2 === 0 ? "md:flex-row-reverse" : ""
+  }`}
+>
+  <div class="p-2 bg-blue-600/50 rounded-xl md:flex-row-reverse w-full md:w-1/2">
+    <picture class="rounded-xl">
+      <source srcset={`${project.thumbs[0]}`} media="(min-width: 992px)" />
+      <source
+        srcset={`${project.thumbs[0]}.small.webp`}
+        media="(min-width: 0px)"
+      />
+      <img
+        loading="lazy"
+        src={`${project.thumbs[0]}.small.webp`}
+        class="h-48 md:h-80 w-full object-cover rounded-xl"
+        alt={project.description}
+      />
+    </picture>
+  </div>
+  <footer class="flex flex-col h-full justify-between w-full md:w-1/2">
+    <span class={`px-5 py-2 mb-4 rounded-xl w-fit ${project.classLogo}`}>
+      <img class="h-6 w-auto" src={project.logo} alt={project.title} />
+    </span>
+    <div class="bg-slate-100 bg-slate-300 dark:bg-slate-900 dark:bg-slate-300">
+    </div>
+    <p class="text-sm md:text-sm mb-4 text-justify">
+      {t(project.i18nDescription as keyof typeof ui.en)}
+    </p>
+    <div class="pb-4 md:pb-8 flex flex-wrap gap-2">
+      {
+        project.usedTechnologies.map((tech) => (
+          <span class="px-3 py-1 text-xs bg-blue-600 rounded-lg text-white hover:scale-110 transition duration-300 ease-in-out">
+            {tech.name}
+          </span>
+        ))
+      }
+    </div>
+    <div class="space-x-2 mt-6 md:mt-0">
+      <a
+        role="button"
+        target="_blank"
+        aria-label={project.title}
+        class="cta-btn px-4 py-1 text-md md:text-xl"
+        href={project.href}>View project</a
+      >
+    </div>
+  </footer>
+</article>
