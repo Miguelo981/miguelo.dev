@@ -1,0 +1,16 @@
+---
+import Brands from "./Brands.astro";
+import Hero from "./Hero.astro";
+---
+
+<section id="home" class="flex flex-col items-center justify-center min-h-screen md:min-h-[90vh] w-full">
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center gap-16 mb-20"
+  >
+    <Hero />
+    <figure class="w-full lg:w-1/2 hidden md:block">
+      <img src="/assets/icons/Refer.svg" alt="Miguelo DEV homepage refer image" />
+    </figure>
+  </div>
+  <Brands />
+</section>

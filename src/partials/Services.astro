@@ -1,0 +1,19 @@
+---
+import ServiceList from "@/components/ServiceList.astro";
+import Services from "@/assets/services.json";
+import type { Service } from "@/models/service.model";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const services: Service[] = Services
+
+---
+
+<section id="services" class='pt-8 md:pt-0 flex flex-col justify-center items-center md:min-h-screen'>
+    <h2 class="text-3xl font-black md:text-5xl mb-10 text-center">{t('services.title')}</h2>
+    <div class='flex flex-wrap justify-center gap-6 pb-8'>
+      <ServiceList serviceList={services} />
+    </div>
+  </section>

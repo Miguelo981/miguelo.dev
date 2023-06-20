@@ -1,0 +1,36 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section
+  id="testimonials"
+  class="flex min-h-screen items-center justify-center"
+>
+  <div class="flex h-full flex-col items-center justify-center py-14 md:py-0">
+    <h2 class="my-20 text-3xl font-black text-center md:mt-0 md:text-5xl">
+      {t("testimonials.title")}
+    </h2>
+    <iframe
+      title="Testimonials"
+      id="testimonialto-miguelo-dev-light"
+      src="https://embed-v2.testimonial.to/w/miguelo-dev?theme=light&card=base&loadMore=on&initialCount=10"
+      frameborder="0"
+      scrolling="no"
+      width="100%"></iframe>
+  </div>
+</section>
+
+<script
+  type="text/javascript"
+  src="https://testimonial.to/js/iframeResizer.min.js"
+>
+
+</script>
+<script type="text/javascript">
+  iFrameResize(
+    { log: false, checkOrigin: false },
+    '#testimonialto-miguelo-dev-light'
+  );
+</script>

@@ -1,0 +1,101 @@
+---
+import faqEnList from "@/assets/faqs.en.json";
+import faqEsList from "@/assets/faqs.es.json";
+import type { Faq } from "@/models/faq";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const faqs: Faq[] = lang === 'es' ? faqEsList : faqEnList;
+---
+
+<section
+  id="faq"
+  class="min-h-screen flex justify-center items-center"
+>
+  <div class="relative flex flex-col md:flex-row justify-center gap-5">
+    <div class="w-full md:w-1/3 mb-7 md:mb-0">
+      <h2 class="text-3xl font-black md:text-5xl mb-6">
+        {t("faq.title")}
+      </h2>
+      <p class="text-sm md:text-base">{t("faq.description")}</p>
+    </div>
+    <ul id="accordion" class="flex max-w-4xl flex-col space-y-5 w-full md:w-3/4">
+      {
+        faqs.map((faq) => {
+          return (
+            <li class="flex flex-col border-b border-gray-400 dark:border-gray-600">
+              <div class="mb-4 flex items-center justify-between">
+                <h3 class="cursor-pointer text-base font-bold hover:text-blue-600 lg:text-xl">
+                  {faq.question}
+                </h3>
+                <svg
+                  data-accordion-icon
+                  class="h-6 w-6 shrink-0 cursor-pointer transition-transform duration-300 ease-in-out dark:fill-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <p class="max-h-0 overflow-hidden text-sm transition-all duration-500 lg:text-base">
+                {faq.answer}
+              </p>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>
+<script>
+  const accordion = document.getElementById("accordion");
+  //const items = accordion?.querySelectorAll('li > p');
+  const headings = accordion?.querySelectorAll("h3");
+  const svgs = accordion?.querySelectorAll("svg");
+
+  headings?.forEach((heading) => {
+    heading.addEventListener("click", () => {
+      closeRemeaningAccordions(heading, headings);
+      handleAccordion(heading);
+    });
+  });
+
+  svgs?.forEach((svg) => {
+    svg.addEventListener("click", () => {
+      closeRemeaningAccordions(svg, svgs);
+      handleAccordion(svg);
+    });
+  });
+
+  function handleAccordion(heading: HTMLElement | SVGElement) {
+    const item = heading.parentNode?.parentNode?.querySelector("p");
+    //item.classList.toggle('hidden');
+    item?.classList.toggle("max-h-[150px]");
+    item?.classList.toggle("max-h-0");
+    item?.classList.toggle("mb-4");
+    const svg = heading.parentNode?.querySelector("svg");
+    svg?.classList.toggle("rotate-180");
+  }
+
+  function closeRemeaningAccordions(
+    heading: HTMLElement | SVGElement,
+    list: NodeListOf<HTMLElement | SVGElement>
+  ) {
+    list.forEach((head) => {
+      if (head !== heading) {
+        const item = head.parentNode?.parentNode?.querySelector("p");
+        //item.classList.add('hidden');
+        //item.classList.remove('block');
+        item?.classList.remove("max-h-[150px]");
+        item?.classList.add("max-h-0");
+      }
+    });
+  }
+</script>

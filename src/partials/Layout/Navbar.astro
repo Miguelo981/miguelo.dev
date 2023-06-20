@@ -1,0 +1,102 @@
+---
+import ContactBtn from '@/components/ContactBtn.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const routes = [
+  { path: "#home", id: "home", text: t("navbar.home") },
+  /* { path: "#about", id: "about", text: t("navbar.about") }, */
+  { path: "#services", id: "services", text: t("navbar.services") },
+  { path: "#projects", id: "projects", text: t("navbar.projects") },
+  { path: "#testimonials", id: "testimonials", text: t("navbar.testimonial") },
+  { path: "#faq", id: "faq", text: t("navbar.faq") },
+];
+---
+
+<header
+  class="fixed bottom-0 lg:bottom-auto lg:top-0 w-full backdrop-blur-md bg-white dark:bg-gray-800/20 bg-opacity-50 z-40"
+>
+  <div class="px-5 py-4 lg:py-6 max-w-6xl mx-auto flex items-center">
+    <h2 class="text-2xl hidden lg:block font-extrabold">
+      <span class="text-blue-600">miguel</span><span class="">o</span
+      ><span class="text-blue-600">.</span><span class=""
+        >dev</span
+      >
+    </h2>
+    <nav class="w-fit mx-auto lg:mx-0 lg:ml-auto">
+      <ul class="flex items-center gap-4 md:gap-8">
+        {
+          routes.map((route) => {
+            const { path, id, text } = route;
+
+            return (
+              <li class="font-light text-xs lg:text-xl dark:text-white hover:text-blue-600">
+                <a href={path} data-name={id} aria-label={text} class="pb-2">
+                  {text}
+                </a>
+              </li>
+            );
+          })
+        }
+        <div class="hidden md:block">
+          <ContactBtn />
+        </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script lang="js">
+  const routes = document.querySelectorAll("header li > a");
+  const { hash } = window.location;
+
+  function updateNavigationStyle(event) {
+    routes.forEach((route) => {
+      route
+        .getAttribute("href")
+        .includes(
+          !event?.target
+            ? hash || null
+            : `#${event.target.getAttribute("data-name")}`
+        )
+        ? route.classList.add(
+            "border-b-2",
+            "border-black",
+            "dark:border-white",
+            "hover:border-blue-600"
+          )
+        : route.classList.remove(
+            "border-b-2",
+            "border-black",
+            "dark:border-white",
+            "hover:border-blue-600"
+          );
+    });
+  }
+
+  function scrollTo(e) {
+    e.preventDefault();
+
+    const href = e.target.getAttribute("href");
+
+    if (!href) return;
+
+    const { offsetTop } = document.querySelector(href);
+
+    if (offsetTop == null) return;
+
+    scroll({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  }
+
+  updateNavigationStyle(hash);
+
+  routes.forEach((route) => {
+    route.addEventListener("click", updateNavigationStyle);
+    route.addEventListener("click", scrollTo);
+  });
+</script>

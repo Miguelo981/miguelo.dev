@@ -1,0 +1,41 @@
+---
+import ContactBtn from '@/components/ContactBtn.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<section class="w-full md:w-1/2">
+  <header>
+    <h1 class="text-3xl font-bold mb-2">{t('home.name')}</h>
+    <h2 class="text-[4.5rem] leading-[5rem] font-semibold">
+      {
+        (t("home.title") as unknown as any[]).map(word => {
+          return (
+            word.class ? 
+            <span class={word.class}>
+              {word.text}
+            </span>
+            :
+            word.text
+          )
+        })
+      }
+    </h2>  
+    <h3 class="text-2xl mdlg:text-6xl font-light mb-5">{t('home.subtitle')}</h3>
+  </header>
+  <footer class="flex items-center gap-2">
+    <!-- <a 
+      title="Download Curriculum"
+      role="button" 
+      download 
+      href="/assets/docs/marodriguez-curriculum.pdf" 
+      class="flex items-center space-x-3 text-sm md:text-base w-fit group cta-btn px-6 py-2">
+        <span>Curriculum</span>
+        <svg class="fill-white group-hover:fill-black h-5 w-auto" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>DocuSign</title><path d="M9.517 3.31h4.966v6.621h3.31L12 16.552 6.207 9.931h3.31V3.31zM0 19.034h24v1.655H0v-1.655z"/></svg>
+    </a> -->
+    <ContactBtn />
+  </footer>
+</section>
