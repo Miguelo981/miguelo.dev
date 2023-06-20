@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import partytown from "@astrojs/partytown";
 import vsharp from "vite-plugin-vsharp";
+import { astroImageTools } from "astro-imagetools";
+import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +17,9 @@ export default defineConfig({
       config: {
         forward: ["dataLayer.push"]
       }
-    })
+    }),
+    robotsTxt(),
+    astroImageTools,
   ],
   vite: {
     plugins: [

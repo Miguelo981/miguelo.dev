@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black dark:text-white;
+  }
+  p, small {
+    @apply text-black dark:text-gray-300;
+  }
+  .cta-btn {
+    @apply bg-black hover:bg-transparent text-white hover:text-inherit border-transparent hover:border-black border-2 hover:border-2 rounded-md text-xl;
+  }
+
+  .secondary-btn {
+    @apply bg-blue-600 hover:bg-transparent rounded-md text-xl text-white hover:text-blue-600  border-transparent hover:border-blue-600 border-2 hover:border-2;
+  }
+
+  .experience-container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+    @apply bg-blue-600 border-blue-600;
+  }
+
+  .timeline::after {
+    @apply bg-gray-300;
+  }
+
+  .input-label {
+    font-size: 10px;
+    @apply text-blue-500;
+  }
+  
+  .label-container {
+    @apply flex absolute left-0 pl-4 pt-1 pointer-events-none;
+  }
+  
+  .app-btn {
+    @apply rounded-full text-xl lg:text-3xl font-semibold px-20 py-4 transition ease-in-out hover:scale-105;
+  }
+  
+  .app-text-input {
+    @apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 dark:text-white bg-gray-100 dark:bg-slate-700 placeholder:text-gray-400 valid:bg-blue-50 valid:dark:bg-slate-700 focus:outline-none border border-gray-300;
+  }
+  
+  .app-text-input.invalid {
+    @apply bg-red-50 dark:bg-slate-700;
+  }
+}
