@@ -1,0 +1,38 @@
+[
+    {
+        "id": "e55bf30d-a5f2-4348-aa87-f55c7326df51",
+        "title": "services.services.web3Dev.title",
+        "description": "services.services.web3Dev.description",
+        "icon": "ethereum"
+    },
+    {
+        "id": "d06be439-7c80-41ac-9ecc-22ad3d7d6a96",
+        "title": "services.services.webDev.title",
+        "description": "services.services.webDev.description",
+        "icon": "html5"
+    },
+    {
+        "id": "0d507509-3773-4238-b1e9-13d478303aac",
+        "title": "services.services.deployDev.title",
+        "description": "services.services.deployDev.description",
+        "icon": "docker"
+    },
+    {
+        "id": "28cd9e3c-3652-438e-8ead-cf15bc8081d2",
+        "title": "services.services.apiDev.title",
+        "description": "services.services.apiDev.description",
+        "icon": "api"
+    },
+    {
+        "id": "26381d45-218a-48f5-9fe5-6f8457715201",
+        "title": "services.services.responsiveDev.title",
+        "description": "services.services.responsiveDev.description",
+        "icon": "airplayvideo"
+    },
+    {
+        "id": "3767f506-bd83-4920-afad-bba40b8206d9",
+        "title": "services.services.customDev.title",
+        "description": "services.services.customDev.description",
+        "icon": "database"
+    }
+]
