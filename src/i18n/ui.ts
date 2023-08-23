@@ -104,7 +104,7 @@ export const ui = {
     "projects.artistealo.description": "Artistealo is an online platform that offers services and artists for events and celebrations. It allows you to search and directly contact professionals in different categories, such as children's entertainment, DJs, artists, service providers, among others. Users can request quotes and reserve the services of their choice without intermediaries or commissions. Artistealo aims to facilitate the event organization process and connect artists and professionals with potential clients.",
     "projects.impactingdigital.description": "Helps companies to transform and acquire a digital DNA. Digital business transformation fascinate them. From strategic approach, routine tasks, to activities and processes.",
     "projects.thehousetalents.description": "TheHouseTalents is a representation agency for actors and actresses. It is dedicated to individually accompanying its talents so that they develop their full potential and achieve their professional goals in film, theater and television. TheHouseTalents works as a team, unifying criteria and outlining artistic, communication, development and positioning strategies for the careers of those they represent. They focus on emerging and genuine talent, providing an open, inclusive and plural space.",
-    "faq.title": "Frequently asked questions",
+    "faq.title": "Frequently Asked Questions",
     "faq.description": "You can find more specific information about the library by digging into the documentation and reading our blog articles.",
   },
   es: {
