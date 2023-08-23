@@ -21,7 +21,7 @@ export default defineConfig({
     robotsTxt(),
     astroImageTools,
   ],
-  vite: {
+  /* vite: {
     plugins: [
       vsharp({
         ".webp": {
@@ -30,5 +30,5 @@ export default defineConfig({
         }
       })
     ]
-  }
+  } */
 });
