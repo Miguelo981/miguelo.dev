@@ -1,11 +1,8 @@
 [
     {
         "id": "fd8918b5-bb60-493f-9f26-94f618672710",
-        "logo": "/assets/images/logo/uniclegacy-logo.webp",
-        "classLogo": "bg-slate-300 dark:bg-slate-900",
         "title": "Unic Legacy",
-        "description": "The first portal that transforms the most relevant moments of your favorite idols into NFTs. Starting with the world-renowned Andrés Iniesta.",
-        "i18nDescription": "projects.uniclegacy.description",
+        "description": "The first portal that transforms the most relevant moments of your favorite idols into NFTs.",
         "href": "https://www.uniclegacy.io/",
         "isPublished": true,
         "date": "2022-04-01T09:10:06.546Z",
@@ -54,12 +51,55 @@
         "testimonials": null
     },
     {
+        "id": "cf299865-c1dc-4d3f-96cb-5fade8b2a05f",
+        "title": "Web3 Dashboard",
+        "description": "Open source dApp specialized in previewing the balance of your Metamask and token managing quickly and easily.",
+        "href": "https://web3.miguelo.dev/",
+        "isPublished": true,
+        "date": "2022-06-01T09:10:06.546Z",
+        "projectType": 1,
+        "projectSource": "https://github.com/Miguelo981/web3-dashboard",
+        "thumbs": [
+            "/assets/images/projects/web3-dashboard/web3-dashboard-mockup-1.webp"
+        ],
+        "usedTechnologies": [
+            {
+                "id": "ce44f9b3-d571-42cc-907a-c91e0d88d03c",
+                "name": "TailwindCss",
+                "icon": "/assets/images/icons/tailwindcss.webp"
+            },
+            {
+                "id": "1a9eb659-95da-4742-9f84-8975b748c11d",
+                "name": "Docker",
+                "icon": "/assets/images/icons/docker.webp"
+            },
+            {
+                "id": "ed352634-95c8-4d37-b87b-be9e4938246b",
+                "name": "React",
+                "icon": "/assets/images/icons/react.webp"
+            },
+            {
+                "id": "fc6ce146-dd8a-4a70-87cd-e97a8bdafcd0",
+                "name": "Nextjs",
+                "icon": "/assets/images/icons/nextjs.webp"
+            },
+            {
+                "id": "4ef6255f-db81-4dfe-a630-92a81b35a92d",
+                "name": "Web3js",
+                "icon": "/assets/images/icons/web3js.webp"
+            },
+            {
+                "id": "8e16e187-74d5-40fe-8c7a-ffe935433deb",
+                "name": "Metamask",
+                "icon": "/assets/images/icons/metamask.webp"
+            }
+        ],
+        "testimonials": null
+    },
+    {
         "id": "a06052da-58df-4f5e-94e3-f6cd60ba27c2",
-        "logo": "/assets/images/logo/avem-logo.png",
-        "classLogo": "bg-slate-300 dark:bg-slate-900",
         "title": "Avem Finance",
-        "description": "Avem is the investor’s connection with the Polkadot domain through a decentralized exchange, launchpad and DeFi products built on top of Shiden Network.",
-        "i18nDescription": "projects.avem.description",
+        "description": "Launchpad and DeFi products built on top of Shiden Network.",
         "href": "https://avem.finance/",
         "isPublished": true,
         "date": "2021-10-01T09:10:06.546Z",
@@ -108,11 +148,8 @@
     },
     {
         "id": "368a9143-a892-41ff-b2aa-739d1ce08769",
-        "logo": "/assets/images/logo/themar-solutions-logo.svg",
-        "classLogo": "bg-slate-300 dark:bg-slate-900",
         "title": "Themar Solutions",
         "description": "Themar is company that develop custom Blockchain and DLT project solutions.",
-        "i18nDescription": "projects.themarsolutions.description",
         "href": "https://themarsolutions.io/",
         "isPublished": true,
         "date": "2021-06-01T09:10:06.546Z",
@@ -155,11 +192,8 @@
     },
     {
         "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df655",
-        "logo": "/assets/images/logo/cryptomasters-logo.png",
-        "classLogo": "bg-slate-300 dark:bg-slate-900",
         "title": "CryptoMaster Academy",
-        "description": "School specialized in cryptoeconomics and decentralized finance. They will teach you how to multiply your savings while keeping the risk always under control.",
-        "i18nDescription": "projects.cryptomasters.description",
+        "description": "School specialized in cryptoeconomics and decentralized finance.",
         "href": "https://cryptomaster.academy/",
         "isPublished": true,
         "date": "2021-12-01T10:10:06.546Z",
@@ -184,9 +218,6 @@
                 "icon": "/assets/images/icons/vuebootstrap.webp"
             },
             {
-                "name": "Web3js"
-            },
-            {
                 "id": "da0376a7-e6f6-4065-8d6c-5331d163aa6b",
                 "name": "TailwindCss",
                 "icon": "/assets/images/icons/tailwindcss.webp"
@@ -206,11 +237,8 @@
     },
     {
         "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df654",
-        "logo": "/assets/images/logo/impacting-digital-logo.svg",
-        "classLogo": "bg-slate-300 dark:bg-slate-900",
         "title": "Impacting Digital",
-        "i18nDescription": "projects.impactingdigital.description",
-        "description": "Helps companies to transform and acquire a digital DNA. Digital business transformation fascinates us. From strategic approach, routine tasks, to activities and processes.",
+        "description": "Helps companies to transform and acquire a digital DNA. From strategic approach, routine tasks, to activities and processes.",
         "href": "https://impacting.digital/",
         "isPublished": true,
         "date": "2023-04-01T10:10:06.546Z",
@@ -219,31 +247,12 @@
         "thumbs": [
             "/assets/images/projects/impacting-digital/impacting-digital-mockup.webp"
         ],
-        "usedTechnologies": [
-            {
-                "name": "Wordpress"
-            },
-            {
-                "name": "TailwindCss"
-            },
-            {
-                "name": "Azure"
-            },
-            {
-                "name": "Nginx"
-            },
-            {
-                "name": "Figma"
-            }
-        ]
+        "usedTechnologies": []
     },
     {
         "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df653",
-        "logo": "/assets/images/logo/artistealo-logo.png",
-        "classLogo": "bg-slate-100 dark:bg-slate-300",
         "title": "Artistealo",
         "description": "Find all kinds of artists, services and suppliers for events or celebrations.",
-        "i18nDescription": "projects.artistealo.description",
         "href": "https://www.artistealo.com/",
         "isPublished": true,
         "date": "2022-10-01T10:10:06.546Z",
@@ -252,25 +261,12 @@
         "thumbs": [
             "/assets/images/projects/artistealo/artistealo-mockup.webp"
         ],
-        "usedTechnologies": [
-            {
-                "name": "Django"
-            },
-            {
-                "name": "Bootstrap"
-            },
-            {
-                "name": "Figma"
-            }
-        ]
+        "usedTechnologies": []
     },
     {
         "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df652",
-        "logo": "/assets/images/logo/the-house-talents-logo.png",
-        "classLogo": "bg-slate-100 dark:bg-slate-300",
         "title": "The House Talents",
         "description": "In constant movement in search of new opportunities, new projects for our represented and represented actors.",
-        "i18nDescription": "projects.thehousetalents.description",
         "href": "https://www.thehousetalents.com/",
         "isPublished": true,
         "date": "2023-01-01T10:10:06.546Z",
@@ -279,25 +275,66 @@
         "thumbs": [
             "/assets/images/projects/the-house-talents/the-house-talents-mockup.webp"
         ],
-        "usedTechnologies": [
-            {
-                "name": "Nextjs"
-            },
-            {
-                "name": "React"
-            },
-            {
-                "name": "Prisma"
-            },
-            {
-                "name": "TailwindCss"
-            },
-            {
-                "name": "Docker"
-            },
-            {
-                "name": "Nginx"
-            }
-        ]
+        "usedTechnologies": []
+    },
+    {
+        "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df655",
+        "title": "Plusholidays",
+        "description": "The best holiday accommodations in Spain. Villas with private pool, Apartments and Houses in Spain.",
+        "href": "https://www.plusholidays.com/",
+        "isPublished": true,
+        "date2": "2023-10-03T10:10:06.546Z",
+        "date": "2024-01-03T10:10:06.546Z",
+        "projectType": 0,
+        "projectSource": "",
+        "thumbs": [
+            "/assets/images/projects/plusholidays/plusholidays-mockup.webp"
+        ],
+        "usedTechnologies": []
+    },
+    {
+        "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df655",
+        "title": "Maarlab",
+        "description": "Technological Solutions for the Accommodation Industry.",
+        "href": "https://maarlab.com/",
+        "isPublished": true,
+        "date2": "2023-11-20T10:10:06.546Z",
+        "date": "2024-01-20T10:10:06.546Z",
+        "projectType": 0,
+        "projectSource": "",
+        "thumbs": [
+            "/assets/images/projects/maarlab/maarlab-mockup.webp"
+        ],
+        "usedTechnologies": []
+    },
+    {
+        "id": "d08e2abc-4f07-4114-b14a-7ec4bc6df659",
+        "title": "SaaSlidator",
+        "description": "Stop wasting hours validating profitable ideas. Gain insights from your SaaS idea description in seconds",
+        "href": "https://saaslidator.com/",
+        "isPublished": true,
+        "date2": "2023-11-20T10:10:06.546Z",
+        "date": "2023-12-31T10:10:06.546Z",
+        "projectType": 0,
+        "projectSource": "",
+        "thumbs": [
+            "/assets/images/projects/saaslidator/saaslidator-mockup.webp"
+        ],
+        "usedTechnologies": []
+    },
+    {
+        "id": "d08e2abc-4f07-4114-b24a-7ec4bc6df659",
+        "title": "Remolonas",
+        "description": "Eat healthy and help the planet and contribute to a more sustainable future",
+        "href": "https://www.remolonas.com/",
+        "isPublished": true,
+        "date2": "2024-06-30T10:10:06.546Z",
+        "date": "2024-06-30T10:10:06.546Z",
+        "projectType": 0,
+        "projectSource": "",
+        "thumbs": [
+            "/assets/images/projects/remolonas/remolonas-mockup.webp"
+        ],
+        "usedTechnologies": []
     }
 ]

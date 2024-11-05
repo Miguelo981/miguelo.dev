@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-black dark:text-white;
-  }
-  p, small {
-    @apply text-black dark:text-gray-300;
-  }
   .cta-btn {
     @apply bg-black hover:bg-transparent text-white hover:text-inherit border-transparent hover:border-black border-2 hover:border-2 rounded-md text-xl;
   }
@@ -50,10 +43,10 @@
   }
   
   .app-text-input {
-    @apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 dark:text-white bg-gray-100 dark:bg-slate-700 placeholder:text-gray-400 valid:bg-blue-50 valid:dark:bg-slate-700 focus:outline-none border border-gray-300;
+    @apply pl-4 pt-4 p-2 rounded-md block w-full text-gray-700 bg-gray-100 placeholder:text-gray-400 valid:bg-blue-50 focus:outline-none border border-gray-300;
   }
   
   .app-text-input.invalid {
-    @apply bg-red-50 dark:bg-slate-700;
+    @apply bg-red-50;
   }
 }
