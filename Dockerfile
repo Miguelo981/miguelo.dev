@@ -1,8 +1,10 @@
-FROM node:18-alpine
+FROM node:22.4
 
-WORKDIR /usr/src/app
+WORKDIR /app
+
 COPY . .
 
-RUN yarn install
-RUN yarn build
-#CMD ["yarn", "build"]
+RUN pnpm install
+RUN pnpm build
+
+CMD ["pnpm", "start"]
