@@ -1,10 +1,9 @@
 import { useFormik } from 'formik';
-import { t } from 'i18next';
-import toast, { Toaster } from 'react-hot-toast';
+import { toast } from 'sonner';
 import { object, string } from 'yup';
 
 import type { ContactMeForm } from '../models/forms/contact-me.model';
-import { createForm } from '../services/contact-form/contact-form.service';
+import { createContactForm } from '@/services/form';
 
 const DEFAULT_FORM: ContactMeForm = {
   full_name: '',
@@ -32,17 +31,13 @@ export default function ContactForm() {
       try {
         setSubmitting(true);
 
-        const res = createForm({ ...values });
+        const res = createContactForm({ ...values });
         toast.promise(
           res,
           {
             loading: t('response.sending'),
             success: t((await res).i18n),
             error: t((await res).i18n),
-          },
-          {
-            duration: 4000,
-            position: 'top-center',
           }
         );
 
@@ -67,7 +62,6 @@ export default function ContactForm() {
       onSubmit={formik.handleSubmit}
       method="post"
     >
-      <Toaster />
       <div className="relative">
         <div className="label-container">
           <label htmlFor="full_name" className="input-label">
