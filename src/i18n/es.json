@@ -17,6 +17,8 @@
       }
     ],
     "customers.title": "Nuestros clientes",
+    "customers.subTitle": "Las empresas nos contratan por los resultados",
+    "customers.description": "Conectamos marcas con sus clientes con experiencias específicas, altamente relevantes y personalizadas. Estamos dirigidos por la audiencia y basados en datos.",
     "workWith": "Trabajamos con",
     "home.subtitle": "Empoderando la Digitalización de Negocios",
     "home.description": "Nos especializamos en construir y diseñar sitios web que se ven geniales, cargan rápido y son fáciles de administrar, atrayendo a los usuarios con diseños limpios, modernos y receptivos.",
@@ -49,6 +51,7 @@
     "contact.buttons.close": "Cerrar X",
     "clients.title": "Trabajos recientes",
     "services.title": "Servicios",
+    "services.subTitle": "La Agencia SEO de referencia",
     "services.description": "Ofrecemos una amplia gama de servicios para ayudarlo a alcanzar sus objetivos comerciales.",
     "services.services.web3Dev.title": "Desarrollo Web3",
     "services.services.web3Dev.description": "Construimos aplicaciones descentralizadas y sitios web que interactúan con la cadena de bloques.",
@@ -82,7 +85,9 @@
     "about.description": "Soy Miguel Ángel, un ingeniero de software políglota dedicado a crear experiencias web excepcionales.\n\nComprometido a brindar servicios de desarrollo web de alta calidad, hago realidad su visión con experiencia en sitios web receptivos, aplicaciones web dinámicas y API.\n\nJuntos, crearemos una presencia digital que se alinee con los objetivos comerciales y supere las expectativas.",
     "about.footer": "Asóciate conmigo para digitalizar tu negocio, agilizar tus procesos y desbloquear nuevas oportunidades en el mundo en línea.",
     "about.slogan": "Colaboremos y creemos soluciones digitales notables adaptadas a sus necesidades únicas.",
-    "testimonials.title": "Testimonios de nuestros clientes",
+    "testimonials.title": "Testimonios",
+    "testimonials.subTitle": "A nuestros clientes les encanta lo que hacemos",
+    "testimonials.description": "Cada cliente necesita una web a medida que otorgue el mayor beneficio para tu negocio. Si quieres conocer mejor cómo trabajamos y qué resultados ofrecen nuestras estrategias, contáctanos sin compromiso.",
     "navbar.about": "Sobre nosotros",
     "navbar.services": "Servicios",
     "navbar.clients": "Clientes",
@@ -99,5 +104,6 @@
     "projects.impactingdigital.description": "Impacting Digital ayuda a las empresas a transformarse y adquirir un ADN digital. La transformación del negocio digital les fascina. Desde el enfoque estratégico, tareas rutinarias, hasta actividades y procesos.",
     "projects.thehousetalents.description": "TheHouseTalents es una agencia de representación de actores y actrices. Se dedica a acompañar de manera individual a sus talentos para que desarrollen su máximo potencial y alcancen sus objetivos profesionales en el cine, teatro y televisión. TheHouseTalents trabaja en equipo, unificando criterios y delineando estrategias artísticas, de comunicación, desarrollo y posicionamiento para las carreras de sus representados. Se enfocan en el talento emergente y genuino, brindando un espacio abierto, inclusivo y plural.",
     "faq.title": "Preguntas frecuentes",
-    "faq.description": "Puede encontrar información más específica sobre la biblioteca investigando la documentación y leyendo los artículos de nuestro blog."
+    "faq.subTitle": "¿Qué dudas necesitas resolver?",
+    "faq.description": "Queremos ayudarte a tomar una decisión totalmente informada y de valor. Es por eso que, a continuación, respondemos varias dudas habituales que se suelen hacer nuestros visitantes."
   }
