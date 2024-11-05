@@ -16,7 +16,7 @@ const { serviceList } = Astro.props;
 <>
   {
     serviceList.map((service) => (
-      <div class="w-[46%] md:w-1/4 dark:hover:shadow-blue-600/20 dark:shadow-blue-600/20 p-2.5 md:p-5 border-gray-200 dark:border-gray-600 border rounded-xl shadow-xl ease-in duration-150 transition hover:shadow-2xl bg-white dark:bg-slate-800 flex flex-col items-center h-auto text-center">
+      <div class="w-[46%] md:w-1/4 p-2.5 md:p-5 border-gray-200 border rounded-xl shadow-xl ease-in duration-150 transition hover:shadow-2xl bg-white flex flex-col items-center h-auto text-center">
         {/* <img src={`/assets/icons/${service.Icon}.svg`} class="w-16 h-auto mx-auto fill-current text-blue-500 pb-4" /> */}
         <ReactSVG
           client:idle
@@ -26,7 +26,7 @@ const { serviceList } = Astro.props;
         <h3 class="text-base md:text-lg font-bold">
           {t(service.title as any)}
         </h3>
-        <div class="pb-1 md:pb-2 border-b dark:border-gray-500 mb-8 w-full" />
+        <div class="pb-1 md:pb-2 border-b0 mb-8 w-full" />
         <p class="text-xs md:text-base">
           {t(service.description as any)}
         </p>
