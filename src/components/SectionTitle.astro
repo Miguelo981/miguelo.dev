@@ -1,0 +1,15 @@
+---
+export type Props = {
+    title: string
+    subTitle: string
+    description: string
+}
+
+const { title, subTitle, description } = Astro.props
+---
+
+<div class="mb-8 md:mb-12 md:mx-auto text-center max-w-3xl">
+    <p class="font-bold text-blue-600 text-base tracking-wide uppercase">{title}</p>
+    <h2 class="font-bold font-heading leading-tighter tracking-tighter text-heading md:text-4xl text-3xl">{subTitle}</h2>
+    <p class="text-muted text-xl mt-4">{description}</p>
+</div>
