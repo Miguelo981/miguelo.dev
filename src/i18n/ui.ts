@@ -1,210 +1,43 @@
+import english from '@/i18n/en.json';
+import spanish from '@/i18n/es.json';
+
 export const languages = {
   en: "English",
-  es: "Français",
+  es: "Spanish",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "es";
 
 export const ui = {
+  en: english,
+  es: spanish,
+} as const;
+
+export const LANGUAGES: Record<
+  string,
+  { code: string; name: string; }
+> = {
   en: {
-    "home.name": "Miguelo DEV",
-    "home.title": [
-      {
-        text: "Web",
-      },
-      {
-        text: " Solutions",
-        class: "text-blue-600 font-bold",
-      },
-      {
-        text: " for Digital",
-      },
-      {
-        text: " Success",
-        class: "text-blue-600 font-bold",
-      }
-    ],
-    "home.subtitle": "Empowering Business Digitalization",
-    "home.description":
-      "We specialize in building and designing websites that look great, load fast, and are easy to manage, enticing users with clean, modern, and responsive designs.",
-    "footer.copy": "©",
-    "footer.brand": "Miguelodev",
-    "footer.rights": "All rights reserved",
-    "response.contactForm.created": "Form successfully sent.",
-    "response.sending": "Sending...",
-    "response.error": "Error sending form.",
-    "contact.title": "Contact",
-    "contact.chat": "Chat with me",
-    "contact.me": "Contact me",
-    "contact.description": "Schedule a call and let's start working together to turn your idea into a successful reality.",
-    "contact.label.fullname": "Fullname",
-    "contact.label.email": "Email",
-    "contact.label.message": "Message",
-    "contact.placeholder.fullname": "Miguel Ángel Rodríguez",
-    "contact.placeholder.email": "ma.rodriguez.dev@miguelo.dev",
-    "contact.placeholder.message": "Lorem Ipsum is simply dummy text...",
-    "contact.hint.fullname": "Not more then 60 characters long.",
-    "contact.hint.message": "Not more then 1000 characters long.",
-    "contact.errors.required.fullname": "Fullname is required.",
-    "contact.errors.required.email": "Email is required.",
-    "contact.errors.required.message": "Message is required.",
-    "contact.errors.length.fullname": "You have more than 60 characters.",
-    "contact.errors.length.message": "You have more than 1000 characters.",
-    "contact.errors.valid.email": "Email must be valid.",
-    "contact.buttons.submit": "Send message",
-    "contact.buttons.close": "Close X",
-    "clients.title": "Recent works",
-    "services.title": "Services",
-    "services.description": "We offer a wide range of services to help you achieve your business goals.",
-    "services.services.web3Dev.title": "Web3 Development",
-    "services.services.web3Dev.description": "We build decentralized applications and websites that interact with the blockchain.",
-    "services.services.webDev.title": "Web Development",
-    "services.services.webDev.description": "We build websites that look great, load fast, modern, and responsive designs.",
-    "services.services.deployDev.title": "Deployment Development",
-    "services.services.deployDev.description": "We build deployment pipelines to automate the process yo turn source code into production.",
-    "services.services.apiDev.title": "API Development",
-    "services.services.apiDev.description": "We build APIs that allow your applications to communicate with other applications.",
-    "services.services.responsiveDev.title": "Responsive Development",
-    "services.services.responsiveDev.description": "We build websites that look great on all devices, from desktops to tablets to smartphones.",
-    "services.services.customDev.title": "Custom Development",
-    "services.services.customDev.description": "We build custom easy to use software solutions to meet your business needs.",
-    "about.title": "About",
-    "about.subtitle": [
-      {
-        text: "Empowering",
-      },
-      {
-        text: " Growth",
-        class: "text-blue-600 font-bold",
-      },
-      {
-        text: " and",
-      },
-      {
-        text: " Elevating Brands",
-        class: "text-blue-600 font-bold",
-      }
-    ],
-    "about.description": "I'm Miguel Ángel, a polyglot software engineer dedicated to crafting exceptional web experiences.\n\nCommitted to delivering high-quality web development services, I bring your vision to life with expertise in responsive websites, dynamic web applications, and APIs.\n\nTogether, we'll create a digital presence that aligns with your business goals and exceeds expectations.",
-    "about.footer": "Partner with me to digitalize your business, streamline your processes, and unlock new opportunities in the online world.",
-    "about.slogan": "Let's collaborate and create remarkable digital solutions tailored to your unique needs.",
-    "testimonials.title": "Our clients testimonials",
-    "navbar.about": "About",
-    "navbar.services": "Services",
-    "navbar.clients": "Clients",
-    "navbar.contact": "Contact",
-    "navbar.projects": "Projects",
-    "navbar.home": "Home",
-    "navbar.faq": "FAQ",
-    "navbar.testimonial": "Testimonials",
-    "projects.avem.description": "AVEM es un protocolo DeFi basado en Astar, un ecosistema parachain web3 EVM compatible de Polkadot. El objetivo de AVEM es convertirse en uno de los principales protocolos en el espacio DeFi en lo que respeta a la liquidez y los servicios de préstamo de AMM, al tiempo que cumple plenamente con la normativa para las listas de tokens de seguridad.",
-    "projects.uniclegacy.description": "UnicLegacy is an NFT platform that tokenizes the legacy of well-known celebrities from around the world, to share a legendary story with their fans and immortalize the most epic moments of their life.",
-    "projects.themarsolutions.description": "Web development and consulting company that specializes in technologies such as Web3, Blockchain, DeFi, Metaverso, Web3 Gaming, NFTs, DAOs, Tooling, Design and Consulting. They offer a variety of services including web development, DeFi protocol development, smart contract optimization, NFT projects, high-yield quant strategies, and cybersecurity.",
-    "projects.cryptomasters.description": "CryptoMasters is a school specialized in cryptoeconomics and decentralized finance. They offer live and personalized training to teach how to invest in cryptocurrencies in an intelligent way. His goal is to help small investors to understand the crypto ecosystem, control risks and develop successful strategies. They are also dedicated to the creation of innovative projects within the crypto ecosystem and provide support in the development of personal projects.",
-    "projects.artistealo.description": "Artistealo is an online platform that offers services and artists for events and celebrations. It allows you to search and directly contact professionals in different categories, such as children's entertainment, DJs, artists, service providers, among others. Users can request quotes and reserve the services of their choice without intermediaries or commissions. Artistealo aims to facilitate the event organization process and connect artists and professionals with potential clients.",
-    "projects.impactingdigital.description": "Helps companies to transform and acquire a digital DNA. Digital business transformation fascinate them. From strategic approach, routine tasks, to activities and processes.",
-    "projects.thehousetalents.description": "TheHouseTalents is a representation agency for actors and actresses. It is dedicated to individually accompanying its talents so that they develop their full potential and achieve their professional goals in film, theater and television. TheHouseTalents works as a team, unifying criteria and outlining artistic, communication, development and positioning strategies for the careers of those they represent. They focus on emerging and genuine talent, providing an open, inclusive and plural space.",
-    "faq.title": "Frequently Asked Questions",
-    "faq.description": "You can find more specific information about the library by digging into the documentation and reading our blog articles.",
+    code: 'en',
+    name: 'English',
   },
   es: {
-    "home.name": "Miguelo DEV",
-    "home.title": [
-      {
-        text: "Soluciones",
-        class: "text-blue-600 font-bold",
-      },
-      {
-        text: " Web para el",
-      },
-      {
-        text: " Éxito",
-        class: "text-blue-600 font-bold",
-      },
-      {
-        text: " Digital",
-      }
-    ],
-    "home.subtitle": "Empoderando la Digitalización de Negocios",
-    "home.description": "Nos especializamos en construir y diseñar sitios web que se ven geniales, cargan rápido y son fáciles de administrar, atrayendo a los usuarios con diseños limpios, modernos y receptivos.",
-    "footer.copy": "©",
-    "footer.brand": "Miguelodev",
-    "footer.rights": "Todos los derechos reservados",
-    "response.contactForm.created": "Formulario enviado con éxito.",
-    "response.sending": "Enviando...",
-    "response.error": "Error al enviar el formulario.",
-    "contact.title": "Contacto",
-    "contact.chat": "Chatea conmigo",
-    "contact.me": "Contáctame",
-    "contact.description": "Agenda una llamada y empecemos a trabajar juntos para convertir tu idea en una realidad de éxito.",
-    "contact.label.fullname": "Nombre completo",
-    "contact.label.email": "Correo electrónico",
-    "contact.label.message": "Mensaje",
-    "contact.placeholder.fullname": "Miguel Ángel Rodríguez",
-    "contact.placeholder.email": "ma.rodriguez.dev@miguelo.dev",
-    "contact.placeholder.message": "Lorem Ipsum es simplemente el texto de relleno...",
-    "contact.hint.fullname": "No más de 60 caracteres.",
-    "contact.hint.message": "No más de 1000 caracteres.",
-    "contact.errors.required.fullname": "Nombre completo es requerido.",
-    "contact.errors.required.email": "Correo electrónico es requerido.",
-    "contact.errors.required.message": "Mensaje es requerido.",
-    "contact.errors.length.fullname": "Tienes más de 60 caracteres.",
-    "contact.errors.length.message": "Tienes más de 1000 caracteres.",
-    "contact.errors.valid.email": "El correo electrónico debe ser válido.",
-    "contact.buttons.submit": "Enviar mensaje",
-    "contact.buttons.close": "Cerrar X",
-    "clients.title": "Trabajos recientes",
-    "services.title": "Servicios",
-    "services.description": "Ofrecemos una amplia gama de servicios para ayudarlo a alcanzar sus objetivos comerciales.",
-    "services.services.web3Dev.title": "Desarrollo Web3",
-    "services.services.web3Dev.description": "Construimos aplicaciones descentralizadas y sitios web que interactúan con la cadena de bloques.",
-    "services.services.webDev.title": "Desarrollo Web",
-    "services.services.webDev.description": "Construimos sitios web que se ven geniales, cargan rápido, diseños modernos y receptivos.",
-    "services.services.deployDev.title": "Despliegue del desarrollo",
-    "services.services.deployDev.description": "Construimos canalizaciones de implementación para automatizar el proceso de convertir el código fuente en producción.",
-    "services.services.apiDev.title": "Desarrollo de API",
-    "services.services.apiDev.description": "Construimos API que permiten que sus aplicaciones se comuniquen con otras aplicaciones.",
-    "services.services.responsiveDev.title": "Desarrollo receptivo",
-    "services.services.responsiveDev.description": "Construimos sitios web que se ven geniales en todos los dispositivos, desde computadoras de escritorio hasta tabletas y teléfonos inteligentes.",
-    "services.services.customDev.title": "Desarrollo personalizado",
-    "services.services.customDev.description": "Construimos soluciones de software personalizadas y fáciles de usar para satisfacer las necesidades de su negocio.",
-    "about.title": "Sobre nosotros",
-    "about.subtitle": [
-      {
-        text: "Impulsando el",
-      },
-      {
-        text: " Crecimiento",
-        class: "text-blue-600 font-bold",
-      },
-      {
-        text: " y",
-      },
-      {
-        text: " Elevando las marcas",
-        class: "text-blue-600 font-bold",
-      }
-    ],
-    "about.description": "Soy Miguel Ángel, un ingeniero de software políglota dedicado a crear experiencias web excepcionales.\n\nComprometido a brindar servicios de desarrollo web de alta calidad, hago realidad su visión con experiencia en sitios web receptivos, aplicaciones web dinámicas y API.\n\nJuntos, crearemos una presencia digital que se alinee con los objetivos comerciales y supere las expectativas.",
-    "about.footer": "Asóciate conmigo para digitalizar tu negocio, agilizar tus procesos y desbloquear nuevas oportunidades en el mundo en línea.",
-    "about.slogan": "Colaboremos y creemos soluciones digitales notables adaptadas a sus necesidades únicas.",
-    "testimonials.title": "Testimonios de nuestros clientes",
-    "navbar.about": "Sobre nosotros",
-    "navbar.services": "Servicios",
-    "navbar.clients": "Clientes",
-    "navbar.contact": "Contacto",
-    "navbar.projects": "Proyectos",
-    "navbar.home": "Inicio",
-    "navbar.faq": "FAQ",
-    "navbar.testimonial": "Testimonios",
-    "projects.avem.description": "AVEM es un protocolo DeFi basado en Astar, un ecosistema parachain web3 EVM compatible de Polkadot. El objetivo de AVEM es convertirse en uno de los principales protocolos en el espacio DeFi en lo que respecta a la liquidez y los servicios de préstamo de AMM, al tiempo que cumple plenamente con la normativa para las listas de tokens de seguridad.",
-    "projects.uniclegacy.description": "UnicLegacy es una plataforma NFT que tokeniza el legado de conocidas celebridades de todo el mundo, para compartir una historia legendaria con sus fans e inmortalizar los momentos más épicos de su vida.",
-    "projects.themarsolutions.description": "Empresa de desarrollo y consultoría web que se especializa en tecnologías como Web3, Blockchain, DeFi, Metaverso, Web3 Gaming, NFTs, DAOs, Tooling, Diseño y Consultoría. Ofrecen una variedad de servicios que incluyen desarrollo web, desarrollo de protocolos DeFi, optimización de contratos inteligentes, proyectos NFT, estrategias cuantitativas de alto rendimiento y ciberseguridad.",
-    "projects.cryptomasters.description": "CryptoMasters es una escuela especializada en criptoeconomía y finanzas descentralizadas. Ofrecen formación en vivo y personalizada para enseñar a invertir en criptomonedas de manera inteligente. Su objetivo es ayudar a los pequeños inversores a comprender el ecosistema crypto, controlar los riesgos y desarrollar estrategias exitosas. También se dedican a la creación de proyectos innovadores dentro del ecosistema crypto y brindan apoyo en el desarrollo de proyectos personales.",
-    "projects.artistealo.description": "Artistealo es una plataforma en línea que ofrece servicios y artistas para eventos y celebraciones. Permite buscar y contactar directamente con profesionales en diferentes categorías, como animación infantil, DJs, artistas, proveedores de servicios, entre otros. Los usuarios pueden solicitar presupuestos y reservar los servicios de su elección sin intermediarios ni comisiones. Artistealo tiene como objetivo facilitar el proceso de organización de eventos y conectar a los artistas y profesionales con potenciales clientes.",
-    "projects.impactingdigital.description": "Impacting Digital ayuda a las empresas a transformarse y adquirir un ADN digital. La transformación del negocio digital les fascina. Desde el enfoque estratégico, tareas rutinarias, hasta actividades y procesos.",
-    "projects.thehousetalents.description": "TheHouseTalents es una agencia de representación de actores y actrices. Se dedica a acompañar de manera individual a sus talentos para que desarrollen su máximo potencial y alcancen sus objetivos profesionales en el cine, teatro y televisión. TheHouseTalents trabaja en equipo, unificando criterios y delineando estrategias artísticas, de comunicación, desarrollo y posicionamiento para las carreras de sus representados. Se enfocan en el talento emergente y genuino, brindando un espacio abierto, inclusivo y plural.",
-    "faq.title": "Preguntas frecuentes",
-    "faq.description": "Puede encontrar información más específica sobre la biblioteca investigando la documentación y leyendo los artículos de nuestro blog.",
+    code: 'es',
+    name: 'Español',
   },
-} as const;
+};
+
+export const showDefaultLang = false;
+
+export const routes = {
+  es: {
+    'aviso-legal': 'aviso-legal',
+    privacidad: 'privacidad',
+    cookies: 'cookies',
+  },
+  en: {
+    'aviso-legal': 'legal-notice',
+    privacidad: 'privacy',
+    cookies: 'cookies',
+  },
+};

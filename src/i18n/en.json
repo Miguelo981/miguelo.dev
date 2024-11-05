@@ -1,0 +1,104 @@
+{
+    "home.name": "Miguelo DEV",
+    "home.title": [
+      {
+        "text": "Web"
+      },
+      {
+        "text": " Solutions",
+        "class": "text-blue-600 font-bold"
+      },
+      {
+        "text": " for Digital"
+      },
+      {
+        "text": " Success",
+        "class": "text-blue-600 font-bold"
+      }
+    ],
+    "customers.title": "Our customers",
+    "workWith": "Worked with",
+    "home.subtitle": "Empowering Business Digitalization",
+    "home.description":
+      "We specialize in building and designing websites that look great, load fast, and are easy to manage, enticing users with clean, modern, and responsive designs.",
+    "footer.copy": "©",
+    "footer.brand": "Miguelodev",
+    "footer.rights": "All rights reserved",
+    "response.contactForm.created": "Form successfully sent.",
+    "response.sending": "Sending...",
+    "response.error": "Error sending form.",
+    "contact.title": "Contact",
+    "contact.chat": "Chat with me",
+    "contact.me": "Contact me",
+    "contact.cta": "Let's work together",
+    "contact.description": "Schedule a call and let's start working together to turn your idea into a successful reality.",
+    "contact.label.fullname": "Fullname",
+    "contact.label.email": "Email",
+    "contact.label.message": "Message",
+    "contact.placeholder.fullname": "Miguel Ángel Rodríguez",
+    "contact.placeholder.email": "ma.rodriguez.dev@miguelo.dev",
+    "contact.placeholder.message": "Lorem Ipsum is simply dummy text...",
+    "contact.hint.fullname": "Not more then 60 characters long.",
+    "contact.hint.message": "Not more then 1000 characters long.",
+    "contact.errors.required.fullname": "Fullname is required.",
+    "contact.errors.required.email": "Email is required.",
+    "contact.errors.required.message": "Message is required.",
+    "contact.errors.length.fullname": "You have more than 60 characters.",
+    "contact.errors.length.message": "You have more than 1000 characters.",
+    "contact.errors.valid.email": "Email must be valid.",
+    "contact.buttons.submit": "Send message",
+    "contact.buttons.close": "Close X",
+    "clients.title": "Recent works",
+    "services.title": "Services",
+    "services.description": "We offer a wide range of services to help you achieve your business goals.",
+    "services.services.web3Dev.title": "Web3 Development",
+    "services.services.web3Dev.description": "We build decentralized applications and websites that interact with the blockchain.",
+    "services.services.webDev.title": "Web Development",
+    "services.services.webDev.description": "We build websites that look great, load fast, modern, and responsive designs.",
+    "services.services.deployDev.title": "Deployment Development",
+    "services.services.deployDev.description": "We build deployment pipelines to automate the process yo turn source code into production.",
+    "services.services.apiDev.title": "API Development",
+    "services.services.apiDev.description": "We build APIs that allow your applications to communicate with other applications.",
+    "services.services.responsiveDev.title": "Responsive Development",
+    "services.services.responsiveDev.description": "We build websites that look great on all devices, from desktops to tablets to smartphones.",
+    "services.services.customDev.title": "Custom Development",
+    "services.services.customDev.description": "We build custom easy to use software solutions to meet your business needs.",
+    "about.title": "About",
+    "about.subtitle": [
+      {
+        "text": "Empowering"
+      },
+      {
+        "text": " Growth",
+        "class": "text-blue-600 font-bold"
+      },
+      {
+        "text": " and"
+      },
+      {
+        "text": " Elevating Brands",
+        "class": "text-blue-600 font-bold"
+      }
+    ],
+    "about.description": "I'm Miguel Ángel, a polyglot software engineer dedicated to crafting exceptional web experiences.\n\nCommitted to delivering high-quality web development services, I bring your vision to life with expertise in responsive websites, dynamic web applications, and APIs.\n\nTogether, we'll create a digital presence that aligns with your business goals and exceeds expectations.",
+    "about.footer": "Partner with me to digitalize your business, streamline your processes, and unlock new opportunities in the online world.",
+    "about.slogan": "Let's collaborate and create remarkable digital solutions tailored to your unique needs.",
+    "testimonials.title": "Our clients testimonials",
+    "navbar.about": "About",
+    "navbar.services": "Services",
+    "navbar.clients": "Clients",
+    "navbar.contact": "Contact",
+    "navbar.projects": "Projects",
+    "navbar.home": "Home",
+    "navbar.faq": "FAQ",
+    "navbar.testimonial": "Testimonials",
+    "projects.avem.description": "AVEM es un protocolo DeFi basado en Astar, un ecosistema parachain web3 EVM compatible de Polkadot. El objetivo de AVEM es convertirse en uno de los principales protocolos en el espacio DeFi en lo que respeta a la liquidez y los servicios de préstamo de AMM, al tiempo que cumple plenamente con la normativa para las listas de tokens de seguridad.",
+    "projects.uniclegacy.description": "UnicLegacy is an NFT platform that tokenizes the legacy of well-known celebrities from around the world, to share a legendary story with their fans and immortalize the most epic moments of their life.",
+    "projects.themarsolutions.description": "Web development and consulting company that specializes in technologies such as Web3, Blockchain, DeFi, Metaverso, Web3 Gaming, NFTs, DAOs, Tooling, Design and Consulting. They offer a variety of services including web development, DeFi protocol development, smart contract optimization, NFT projects, high-yield quant strategies, and cybersecurity.",
+    "projects.cryptomasters.description": "CryptoMasters is a school specialized in cryptoeconomics and decentralized finance. They offer live and personalized training to teach how to invest in cryptocurrencies in an intelligent way. His goal is to help small investors to understand the crypto ecosystem, control risks and develop successful strategies. They are also dedicated to the creation of innovative projects within the crypto ecosystem and provide support in the development of personal projects.",
+    "projects.artistealo.description": "Artistealo is an online platform that offers services and artists for events and celebrations. It allows you to search and directly contact professionals in different categories, such as children's entertainment, DJs, artists, service providers, among others. Users can request quotes and reserve the services of their choice without intermediaries or commissions. Artistealo aims to facilitate the event organization process and connect artists and professionals with potential clients.",
+    "projects.impactingdigital.description": "Helps companies to transform and acquire a digital DNA. Digital business transformation fascinate them. From strategic approach, routine tasks, to activities and processes.",
+    "projects.thehousetalents.description": "TheHouseTalents is a representation agency for actors and actresses. It is dedicated to individually accompanying its talents so that they develop their full potential and achieve their professional goals in film, theater and television. TheHouseTalents works as a team, unifying criteria and outlining artistic, communication, development and positioning strategies for the careers of those they represent. They focus on emerging and genuine talent, providing an open, inclusive and plural space.",
+    "faq.title": "Frequently Asked Questions",
+    "faq.description": "You can find more specific information about the library by digging into the documentation and reading our blog articles."
+  }
