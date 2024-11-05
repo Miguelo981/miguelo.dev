@@ -1,0 +1,24 @@
+---
+import { ReactSVG } from 'react-svg'
+
+export type Props = {
+    title: string
+    description: string
+    icon: string
+}
+
+const { title, description, icon } = Astro.props
+---
+    <div class="flex flex-row max-w-md hover:border-blue-600 hover:bg-gray-50 bg-transparent border border-transparent p-4 transition ease-in-out duration-300 rounded-lg">
+        <div class="flex justify-center">
+            <ReactSVG
+                client:idle
+                src={icon}
+                className="mr-4 rtl:ml-4 rtl:mr-0 bg-blue-600 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full fill-current text-white w-10"
+            />
+        </div>
+        <div class="mt-0.5">
+            <h3 class="font-bold text-xl text-black md:text-[1.3rem]">{title}</h3>
+            <p class="text-muted mt-3 text-gray-600">{description}</p>
+        </div>
+    </div>

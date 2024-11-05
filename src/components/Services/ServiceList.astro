@@ -1,0 +1,22 @@
+---
+import type { Service } from "@/models/service.model";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import ServiceItem from "@/components/Services/ServiceItem.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export interface Props {
+  serviceList: Service[];
+}
+
+const { serviceList } = Astro.props;
+---
+
+<>
+  {
+    serviceList.map((service) => (
+        <ServiceItem title={t(service.title as any)} description={t(service.description as any)} icon={`/assets/images/icons/${service.icon}.svg`} />
+    ))
+  }
+</>
