@@ -1,6 +1,7 @@
 ---
 import Projects from '@/assets/projects.json'
 import BentoList from '@/components/Bento/BentoList.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import type { Project } from '@/models/projects';
 import { sortByDate } from '@/utils/date';
@@ -14,14 +15,6 @@ const t = useTranslations(lang);
 ---
 
 <section id="projects" class="pt-16 lg:pt-0 pb-16 lg:pb-32 text-center">
-    <p class="mt-20 mb-2 font-bold md:mt-0 text-xl md:text-2xl text-blue-600">
-        {t('customers.title')}
-    </p>
-    <h2 class="mb-3 text-3xl md:text-4xl text-center text-balance">
-        Las empresas nos contratan por los resultados
-    </h2>
-    <p class="max-w-4xl mx-auto mb-5">Conectamos marcas con sus clientes con experiencias específicas, altamente relevantes y personalizadas. Estamos dirigidos por la audiencia y basados en datos.
-    </p >
-    <!-- <h2 class="text-6xl font-bold mb-8">{t('customers.title')}</h2> -->
+    <SectionTitle title={t('customers.title')} subTitle={t('customers.subTitle')} description={t('customers.description')} />
     <BentoList projects={projects} />
 </section>
