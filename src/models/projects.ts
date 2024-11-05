@@ -3,8 +3,8 @@ export interface Project {
     logo: string,
     classLogo: string,
     title: string,
-    description: string,
-    i18nDescription: string,
+    description?: string,
+    i18nDescription?: string,
     usedTechnologies: {
        name: string,
        icon: string,

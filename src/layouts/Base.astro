@@ -1,6 +1,6 @@
 ---
-import Footer from '@/partials/Layout/Footer.astro';
-import Navbar from '@/partials/Layout/Navbar.astro';
+import Footer from '@/components/Layout/Footer.astro';
+import Navbar from '@/components/Layout/Navbar.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import { getLangFromUrl } from '../i18n/utils';
@@ -52,10 +52,10 @@ const {
       }
     </style>
   </head>
-  <body class="bg-slate-100 dark:bg-slate-900">
+  <body class="bg-slate-100">
     <Navbar />
     <main class='max-w-6xl mx-auto px-5'>
-      <slot></slot>
+      <slot />
     </main>
     <Footer />
   </body>

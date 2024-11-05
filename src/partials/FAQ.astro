@@ -25,14 +25,14 @@ const faqs: Faq[] = lang === 'es' ? faqEsList : faqEnList;
       {
         faqs.map((faq) => {
           return (
-            <li class="flex flex-col border-b border-gray-400 dark:border-gray-600">
+            <li class="flex flex-col border-b border-gray-400">
               <div class="mb-4 flex items-center justify-between">
                 <h3 class="cursor-pointer text-base font-bold hover:text-blue-600 lg:text-xl">
                   {faq.question}
                 </h3>
                 <svg
                   data-accordion-icon
-                  class="h-6 w-6 shrink-0 cursor-pointer transition-transform duration-300 ease-in-out dark:fill-white"
+                  class="h-6 w-6 shrink-0 cursor-pointer transition-transform duration-300 ease-in-out"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

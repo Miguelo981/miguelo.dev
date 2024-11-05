@@ -3,6 +3,7 @@ import Navbar from '../layouts/Navbar.astro';
 import Footer from '../layouts/Footer.astro'
 import i18next, { t } from "i18next";
 import { DEFAULT_LANG } from '../config/i18n.config';
+import { Toaster } from 'sonner'
 
 var { lang } = Astro.params;
 
@@ -35,7 +36,7 @@ if (i18next.language !== lang) i18next.changeLanguage(lang)
 			async
 			src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_CODE}`}
 		/>
-		<script>
+		<script lang="js">
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				window.dataLayer.push(arguments);
@@ -49,6 +50,7 @@ if (i18next.language !== lang) i18next.changeLanguage(lang)
 		<Navbar />
 	</header>
 	<body>
+		<Toaster client:idle  />
 		<slot />
 	</body>
 	<Footer />

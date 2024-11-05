@@ -1,0 +1,24 @@
+---
+import About from '@/partials/About.astro';
+import Contact from '@/partials/Contact.astro';
+import FAQ from '@/partials/FAQ.astro';
+import Home from '@/partials/Home.astro';
+import Customers from '@/partials/Customers.astro';
+import Services from '@/partials/Services.astro';
+import Testimonial from '@/partials/Testimonial.astro';
+import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+  <Home />
+  <About />
+  <Services />
+  <Customers />
+  <Testimonial />
+  <FAQ />
+  <Contact />
+</Base>
