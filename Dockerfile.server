@@ -1,0 +1,15 @@
+FROM node:tls AS runtime
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm i -g pnpm
+RUN pnpm i
+RUN pnpm build
+
+
+ENV HOST=0.0.0.0
+ENV PORT=80
+
+CMD node ./dist/server/entry.mjs

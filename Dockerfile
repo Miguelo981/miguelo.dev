@@ -1,10 +1,17 @@
-FROM node:22.4
+FROM node:lts AS build
 
 WORKDIR /app
 
+COPY package*.json ./
+RUN npm i -g pnpm
+RUN pnpm i
+
 COPY . .
+RUN npm run build
 
-RUN pnpm install
-RUN pnpm build
+FROM nginx:alpine AS runtime
 
-CMD ["pnpm", "start"]
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 8080
